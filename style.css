@@ -1,0 +1,155 @@
+style.css
+{
+    Box-sizing: border-box;
+  }
+  
+  body {
+    Margin: 0;
+    Font-family: Arial, sans-serif;
+    Display: flex;
+    Flex-direction: row;
+    Height: 100vh;
+  }
+  
+  .left {
+    Flex: 1;
+    Padding: 40px;
+    Overflow-y: auto;
+    Background-color: #1861ba;
+    Color: #fff;
+  }
+  
+  .right {
+    Flex: 1;
+    Overflow-y: auto;
+    Background-color: #fff;
+    Color: #000;
+    Display: flex;
+    Flex-direction: column;
+  }
+  
+  H2 {
+    Margin-bottom: 20px;
+    Text-align: center;
+  }
+  
+  form {
+    Display: flex;
+    Flex-direction: column;
+  }
+  
+  label {
+    Margin-top: 10px;
+    Font-weight: bold;
+  }
+  
+  Select, input, button {
+    Margin: 10px 0;
+    Padding: 12px;
+    Font-size: 16px;
+    Border-radius: 5px;
+    Border: 1px solid #ccc;
+  }
+  
+  button {
+    Background-color: #05305b;
+    Color: #fff;
+    Font-weight: bold;
+    Border: none;
+    Cursor: pointer;
+    Transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    Background-color: #131f2f;
+  }
+  
+  .reset-btn {
+    Background-color: #ccc;
+    Color: black;
+    Margin-top: 5px;
+  }
+  
+  .card {
+    Background-color: #f9fafb;
+    Border: 1px solid #e5e7eb;
+    Border-radius: 8px;
+    Padding: 15px;
+    Margin: 10px 0;
+    Box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    Cursor: pointer;
+    User-select: none;
+  }
+  
+  .card strong {
+    Display: block;
+    Font-size: 18px;
+    Color: #1861ba;
+    Margin-bottom: 5px;
+  }
+  
+  .card span {
+    Display: block;
+    Margin-top: 8px;
+    Font-size: 14px;
+    Color: #333;
+  }
+  
+  #results p {
+    Font-style: italic;
+    Color: #6b7280;
+  }
+  
+  .right h2 {
+    Background-color: #0a376e;
+    Color: #fff;
+    Width: 100%;
+    Padding: 15px 0;
+    Margin: 0;
+    Text-align: center;
+    Box-sizing: border-box;
+  }
+  
+  .details {
+    Max-height: 0;
+    Overflow: hidden;
+    Transition: max-height 0.3s ease;
+    Background-color: #e9f0fb;
+    Padding: 0 15px;
+    Border-radius: 0 0 8px 8px;
+    Margin-top: 8px;
+    Font-size: 14px;
+    Color: #333;
+  }
+  
+  .card.active .details {
+    Max-height: 200px;
+    Padding: 10px 15px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      Flex-direction: column;
+    }
+  
+    .left {
+      Width: 100%;
+      Height: auto;
+      Padding: 20px;
+    }
+  
+    .left h2 {
+      Font-weight: bolder;
+    }
+  }
+  
+  /* AI-generated card highlight */
+  .card.ai {
+      Background-color: #e0f7ff;
+      Border-left: 5px solid #007bff;
+      Box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+  
+    .card.ai strong {
+      Color: #007bff;
+    }

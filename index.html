@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scholarship Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="left">
+    <h2>Scholarship Finder</h2>
+    <form id="scholarshipForm">
+      <label for="studentName">Student Name</label>
+      <input type="text" id="studentName" placeholder="Enter your name" required />
+
+      <label for="marks">Percentage Marks</label>
+      <input type="number" id="marks" min="0" max="100" placeholder="e.g., 75" required />
+
+      <label for="school">School</label>
+      <select id="school" required>
+        <option value="">-- Select School --</option>
+        <option value="NGP">NGP Public School</option>
+        <option value="KG">KG Public School</option>
+      </select>
+
+      <label for="state">State</label>
+      <select id="state" required>
+        <option value="">-- Select State --</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Karnataka">Karnataka</option>
+      </select>
+
+      <label for="district">District</label>
+      <select id="district" required>
+        <option value="">-- Select District --</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Madurai">Madurai</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Idukki">Idukki</option>
+        <option value="Bangalore">Bangalore</option>
+      </select>
+
+      <label for="category">Select Category</label>
+      <select id="category" required>
+        <option value="">-- Choose Category --</option>
+        <option value="General">General</option>
+        <option value="SC">SC</option>
+        <option value="OBC">OBC</option>
+      </select>
+
+      <label for="income">Annual Income (₹)</label>
+      <input type="number" id="income" min="24000" placeholder="e.g., 200000" required />
+
+      <button type="submit">Check Scholarships</button>
+      <button type="reset" class="reset-btn">Reset Form</button>
+    </form>
+  </div>
+
+  <div class="right">
+    <h2>Scholarships</h2>
+    <div id="results">
+      <p>Fill the form to see eligible scholarships.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="//code.tidio.co/lcphhbvwrkhahyh33g7r2kmmhv4d52jq.js" async></script>
+</body>
+</html>
