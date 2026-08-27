@@ -3,70 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scholarship Finder</title>
+  <title>Scholarship Finder | AI-Powered Education Support</title>
+  <meta name="description" content="Discover and apply for eligible government and private scholarships in India based on your academic profile, state, income, and category." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="left">
-    <h2>Scholarship Finder</h2>
-    <form id="scholarshipForm">
-      <label for="studentName">Student Name</label>
-      <input type="text" id="studentName" placeholder="Enter your name" required />
+  <div class="app-container">
+    <!-- Left Sidebar / Form Section -->
+    <aside class="left-panel">
+      <div class="brand-header">
+        <div class="brand-badge">🎓 AI Scholarship Finder</div>
+        <h2>Find Your Scholarship</h2>
+        <p class="subtitle">Enter your academic & personal details to discover instant eligible financial aid options.</p>
+      </div>
 
-      <label for="marks">Percentage Marks</label>
-      <input type="number" id="marks" min="0" max="100" placeholder="e.g., 75" required />
+      <form id="scholarshipForm" autocomplete="off">
+        <div class="form-group">
+          <label for="studentName">Student Full Name</label>
+          <input type="text" id="studentName" placeholder="e.g., Akilesh Kumar" required />
+        </div>
 
-      <label for="school">School</label>
-      <select id="school" required>
-        <option value="">-- Select School --</option>
-        <option value="NGP">NGP Public School</option>
-        <option value="KG">KG Public School</option>
-      </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="marks">Percentage Marks (%)</label>
+            <input type="number" id="marks" min="0" max="100" placeholder="e.g., 85" required />
+          </div>
 
-      <label for="state">State</label>
-      <select id="state" required>
-        <option value="">-- Select State --</option>
-        <option value="Tamil Nadu">Tamil Nadu</option>
-        <option value="Kerala">Kerala</option>
-        <option value="Karnataka">Karnataka</option>
-      </select>
+          <div class="form-group">
+            <label for="income">Annual Income (₹)</label>
+            <input type="number" id="income" min="24000" placeholder="e.g., 200000" required />
+          </div>
+        </div>
 
-      <label for="district">District</label>
-      <select id="district" required>
-        <option value="">-- Select District --</option>
-        <option value="Coimbatore">Coimbatore</option>
-        <option value="Chennai">Chennai</option>
-        <option value="Madurai">Madurai</option>
-        <option value="Kochi">Kochi</option>
-        <option value="Idukki">Idukki</option>
-        <option value="Bangalore">Bangalore</option>
-      </select>
+        <div class="form-group">
+          <label for="school">School / Institution</label>
+          <select id="school" required>
+            <option value="">-- Select School --</option>
+            <option value="NGP">NGP Public School</option>
+            <option value="KG">KG Public School</option>
+            <option value="Other">Other Institution</option>
+          </select>
+        </div>
 
-      <label for="category">Select Category</label>
-      <select id="category" required>
-        <option value="">-- Choose Category --</option>
-        <option value="General">General</option>
-        <option value="SC">SC</option>
-        <option value="OBC">OBC</option>
-      </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state" required>
+              <option value="">-- Select State --</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Karnataka">Karnataka</option>
+            </select>
+          </div>
 
-      <label for="income">Annual Income (₹)</label>
-      <input type="number" id="income" min="24000" placeholder="e.g., 200000" required />
+          <div class="form-group">
+            <label for="district">District</label>
+            <select id="district" required>
+              <option value="">-- Select District --</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Madurai">Madurai</option>
+              <option value="Kochi">Kochi</option>
+              <option value="Idukki">Idukki</option>
+              <option value="Bangalore">Bangalore</option>
+            </select>
+          </div>
+        </div>
 
-      <button type="submit">Check Scholarships</button>
-      <button type="reset" class="reset-btn">Reset Form</button>
-    </form>
-  </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="">-- Choose Category --</option>
+            <option value="General">General</option>
+            <option value="SC">SC</option>
+            <option value="OBC">OBC</option>
+          </select>
+        </div>
 
-  <div class="right">
-    <h2>Scholarships</h2>
-    <div id="results">
-      <p>Fill the form to see eligible scholarships.</p>
-    </div>
+        <div class="button-group">
+          <button type="submit" class="primary-btn">
+            <span class="btn-icon">🔍</span> Check Scholarships
+          </button>
+          <button type="reset" class="reset-btn" id="resetBtn">
+            <span>↺ Reset Form</span>
+          </button>
+        </div>
+      </form>
+    </aside>
+
+    <!-- Right Main Content / Results Section -->
+    <main class="right-panel">
+      <header class="results-header">
+        <div>
+          <h2>Available Scholarships</h2>
+          <p id="resultsSubtitle">Showing all available scholarship opportunities in India</p>
+        </div>
+        <div class="stats-badge" id="scholarshipCountBadge">10 Available</div>
+      </header>
+
+      <div id="results" class="results-grid">
+        <!-- Dynamic Cards Inserted Here by script.js -->
+        <p class="initial-msg">Fill the form on the left to see eligible scholarships tailored for you.</p>
+      </div>
+    </main>
   </div>
 
   <script src="script.js"></script>
-  <script src="//code.tidio.co/lcphhbvwrkhahyh33g7r2kmmhv4d52jq.js" async></script>
+  <script src="https://code.tidio.co/lcphhbvwrkhahyh33g7r2kmmhv4d52jq.js" async></script>
 </body>
 </html>
